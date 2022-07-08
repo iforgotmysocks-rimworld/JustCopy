@@ -12,18 +12,11 @@ namespace JustCopy
     {
         public Main(ModContentPack content) : base(content)
         {
-            GetSettings<ModSettings>();
-        }
-
-        public override void DoSettingsWindowContents(UnityEngine.Rect inRect)
-        {
-            base.DoSettingsWindowContents(inRect);
-            //GetSettings<ModSettings>().DoWindowContents(inRect);
         }
 
         public override string SettingsCategory()
         {
-            return System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+            return "Just Copy";
         }
     }
 }

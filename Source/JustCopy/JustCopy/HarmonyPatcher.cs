@@ -39,8 +39,8 @@ namespace JustCopy
                         var newRes = new FoodRestriction
                         {
                             id = !resDB.AllFoodRestrictions.Any() ? 1 : resDB.AllFoodRestrictions.Max(x => x.id) + 1,
-                            label = cur.label + " (copy)",
-                            filter = new ThingFilter()
+                            label = cur.label + " copy",
+                            filter = new ThingFilter(),
                         };
                         newRes.filter.CopyAllowancesFrom(cur.filter);
                         resDB.AllFoodRestrictions.Add(newRes);
@@ -69,7 +69,7 @@ namespace JustCopy
                         var newRes = new Outfit
                         {
                             uniqueId = !resDB.AllOutfits.Any() ? 1 : resDB.AllOutfits.Max(x => x.uniqueId) + 1,
-                            label = cur.label + " (copy)",
+                            label = cur.label + " copy",
                             filter = new ThingFilter()
                         };
                         newRes.filter.CopyAllowancesFrom(cur.filter);
@@ -99,7 +99,7 @@ namespace JustCopy
                         var newRes = new DrugPolicy
                         {
                             uniqueId = !resDB.AllPolicies.Any() ? 1 : resDB.AllPolicies.Max(x => x.uniqueId) + 1,
-                            label = cur.label + " (copy)",
+                            label = cur.label + " copy",
                         };
 
                         var curDrugEntries = (typeof(DrugPolicy).GetField("entriesInt", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(cur) as List<DrugPolicyEntry>);
