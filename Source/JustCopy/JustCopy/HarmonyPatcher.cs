@@ -28,7 +28,7 @@ namespace JustCopy
         public static void Postfix(Dialog_ManageFoodRestrictions __instance, Rect inRect)
         {
             Rect copyRect = new Rect(RestrictionOffset, 0f, 150f, 35f);
-            if (Widgets.ButtonText(copyRect, "NewFromExisting".Translate(), true, true, true))
+            if (Widgets.ButtonText(copyRect, "JC_NewFromExisting".Translate(), true, true, true))
             {
                 List<FloatMenuOption> floatMenuList = new List<FloatMenuOption>();
                 var resDB = Current.Game.foodRestrictionDatabase;
@@ -58,7 +58,7 @@ namespace JustCopy
         public static void Postfix(Dialog_ManageOutfits __instance, Rect inRect)
         {
             Rect copyRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.RestrictionOffset, 0f, 150f, 35f);
-            if (Widgets.ButtonText(copyRect, "NewFromExisting".Translate(), true, true, true))
+            if (Widgets.ButtonText(copyRect, "JC_NewFromExisting".Translate(), true, true, true))
             {
                 List<FloatMenuOption> floatMenuList = new List<FloatMenuOption>();
                 var resDB = Current.Game.outfitDatabase;
@@ -88,7 +88,7 @@ namespace JustCopy
         public static void Postfix(Dialog_ManageDrugPolicies __instance, Rect inRect)
         {
             Rect copyRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.RestrictionOffset, 0f, 150f, 35f);
-            if (Widgets.ButtonText(copyRect, "NewFromExisting".Translate(), true, true, true))
+            if (Widgets.ButtonText(copyRect, "JC_NewFromExisting".Translate(), true, true, true))
             {
                 List<FloatMenuOption> floatMenuList = new List<FloatMenuOption>();
                 var resDB = Current.Game.drugPolicyDatabase;
