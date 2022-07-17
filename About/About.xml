@@ -9,8 +9,11 @@
   </supportedVersions>
   <packageId>iforgotmysocks.JustCopy</packageId>
 	<description>
-v0.1.0
-    
-Allows to quickly create new outfits, food restrictions and drug policies from already existing ones.  
-	</description>
+v1.0.0
+
+Quick and simple qol mod adding new buttons to the outfit / food restriction / drug schedule menus, allowing you to create a new option from an existing entry.
+
+Credits
+Preview image by Shakesthespeare
+  </description>
 </ModMetaData>
