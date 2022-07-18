@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-  <JC_NewFromExisting>New from existing...</JC_NewFromExisting>
+  <JC_NewFromExisting>New from...</JC_NewFromExisting>
+  <JC_Default>Set default</JC_Default>
 </LanguageData>
