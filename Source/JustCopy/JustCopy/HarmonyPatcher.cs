@@ -1,11 +1,8 @@
 ﻿using HarmonyLib;
 using RimWorld;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
@@ -25,12 +22,12 @@ namespace JustCopy
     public class Dialog_ManageFoodRestrictions_DoWindowContetents
     {
         public static readonly float RestrictionOffset = 450f + 30f;
-        public static void Postfix(Dialog_ManageFoodRestrictions __instance, Rect inRect)
+        public static void Postfix(Dialog_ManageFoodRestrictions __instance)
         {
-            Rect copyRect = new Rect(RestrictionOffset, 0f, 150f, 35f);
+            var copyRect = new Rect(RestrictionOffset, 0f, 150f, 35f);
             if (Widgets.ButtonText(copyRect, "JC_NewFromExisting".Translate(), true, true, true))
             {
-                List<FloatMenuOption> floatMenuList = new List<FloatMenuOption>();
+                var floatMenuList = new List<FloatMenuOption>();
                 var resDB = Current.Game.foodRestrictionDatabase;
                 foreach (var cur in resDB.AllFoodRestrictions)
                 {
@@ -55,12 +52,12 @@ namespace JustCopy
     [HarmonyPatch(typeof(Dialog_ManageOutfits), "DoWindowContents")]
     public class Dialog_ManageOutfits_DoWindowContetents
     {
-        public static void Postfix(Dialog_ManageOutfits __instance, Rect inRect)
+        public static void Postfix(Dialog_ManageOutfits __instance)
         {
-            Rect copyRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.RestrictionOffset, 0f, 150f, 35f);
+            var copyRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.RestrictionOffset, 0f, 150f, 35f);
             if (Widgets.ButtonText(copyRect, "JC_NewFromExisting".Translate(), true, true, true))
             {
-                List<FloatMenuOption> floatMenuList = new List<FloatMenuOption>();
+                var floatMenuList = new List<FloatMenuOption>();
                 var resDB = Current.Game.outfitDatabase;
                 foreach (var cur in resDB.AllOutfits)
                 {
@@ -85,12 +82,12 @@ namespace JustCopy
     [HarmonyPatch(typeof(Dialog_ManageDrugPolicies), "DoWindowContents")]
     public class Dialog_ManageDrugPolicies_DoWindowContetents
     {
-        public static void Postfix(Dialog_ManageDrugPolicies __instance, Rect inRect)
+        public static void Postfix(Dialog_ManageDrugPolicies __instance)
         {
-            Rect copyRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.RestrictionOffset, 0f, 150f, 35f);
+            var copyRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.RestrictionOffset, 0f, 150f, 35f);
             if (Widgets.ButtonText(copyRect, "JC_NewFromExisting".Translate(), true, true, true))
             {
-                List<FloatMenuOption> floatMenuList = new List<FloatMenuOption>();
+                var floatMenuList = new List<FloatMenuOption>();
                 var resDB = Current.Game.drugPolicyDatabase;
                 foreach (var cur in resDB.AllPolicies)
                 {
