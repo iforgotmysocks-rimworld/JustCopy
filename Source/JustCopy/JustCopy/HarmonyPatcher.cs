@@ -29,7 +29,7 @@ namespace JustCopy
 
         public static void Postfix(Dialog_ManageFoodRestrictions __instance)
         {
-            var copyRect = new Rect(RestrictionOffset, 0f, RestrictionWidth, 35f);
+            var copyRect = new Rect(RestrictionOffset + ModSettings.xOffset, 0f + ModSettings.yOffset, RestrictionWidth, 35f);
             if (Widgets.ButtonText(copyRect, "JC_NewFromExisting".Translate(), true, true, true))
             {
                 var floatMenuList = new List<FloatMenuOption>();
@@ -52,7 +52,7 @@ namespace JustCopy
                 Find.WindowStack.Add(new FloatMenu(floatMenuList));
             }
 
-            var defaultRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.DefaultOffset, 0f, Dialog_ManageFoodRestrictions_DoWindowContetents.DefaultWidth, 35f);
+            var defaultRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.DefaultOffset + ModSettings.xOffset, 0f + ModSettings.yOffset, Dialog_ManageFoodRestrictions_DoWindowContetents.DefaultWidth, 35f);
             var currentRest = typeof(Dialog_ManageFoodRestrictions).GetField("selFoodRestrictionInt", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(__instance) as FoodRestriction;
             if (currentRest == null) return;
             if (Widgets.ButtonText(defaultRect, "JC_Default".Translate(), true, true, true))
@@ -75,7 +75,7 @@ namespace JustCopy
     {
         public static void Postfix(Dialog_ManageOutfits __instance)
         {
-            var copyRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.RestrictionOffset, 0f, Dialog_ManageFoodRestrictions_DoWindowContetents.RestrictionWidth, 35f);
+            var copyRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.RestrictionOffset + ModSettings.xOffset, 0f + ModSettings.yOffset, Dialog_ManageFoodRestrictions_DoWindowContetents.RestrictionWidth, 35f);
             if (Widgets.ButtonText(copyRect, "JC_NewFromExisting".Translate(), true, true, true))
             {
                 var floatMenuList = new List<FloatMenuOption>();
@@ -98,7 +98,7 @@ namespace JustCopy
                 Find.WindowStack.Add(new FloatMenu(floatMenuList));
             }
 
-            var defaultRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.DefaultOffset, 0f, Dialog_ManageFoodRestrictions_DoWindowContetents.DefaultWidth, 35f);
+            var defaultRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.DefaultOffset + ModSettings.xOffset, 0f + ModSettings.yOffset, Dialog_ManageFoodRestrictions_DoWindowContetents.DefaultWidth, 35f);
             var currentRest = typeof(Dialog_ManageOutfits).GetField("selOutfitInt", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(__instance) as Outfit;
             if (currentRest == null) return;
             if (Widgets.ButtonText(defaultRect, "JC_Default".Translate(), true, true, true))
@@ -121,7 +121,7 @@ namespace JustCopy
     {
         public static void Postfix(Dialog_ManageDrugPolicies __instance)
         {
-            var copyRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.RestrictionOffset, 0f, Dialog_ManageFoodRestrictions_DoWindowContetents.RestrictionWidth, 35f);
+            var copyRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.RestrictionOffset + ModSettings.xOffset, 0f + ModSettings.yOffset, Dialog_ManageFoodRestrictions_DoWindowContetents.RestrictionWidth, 35f);
             if (Widgets.ButtonText(copyRect, "JC_NewFromExisting".Translate(), true, true, true))
             {
                 var floatMenuList = new List<FloatMenuOption>();
@@ -153,7 +153,7 @@ namespace JustCopy
                 Find.WindowStack.Add(new FloatMenu(floatMenuList));
             }
 
-            var defaultRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.DefaultOffset, 0f, Dialog_ManageFoodRestrictions_DoWindowContetents.DefaultWidth, 35f);
+            var defaultRect = new Rect(Dialog_ManageFoodRestrictions_DoWindowContetents.DefaultOffset + ModSettings.xOffset, 0f + ModSettings.yOffset, Dialog_ManageFoodRestrictions_DoWindowContetents.DefaultWidth, 35f);
             var currentRest = typeof(Dialog_ManageDrugPolicies).GetField("selPolicy", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(__instance) as DrugPolicy;
             if (currentRest == null) return;
             if (Widgets.ButtonText(defaultRect, "JC_Default".Translate(), true, true, true))
